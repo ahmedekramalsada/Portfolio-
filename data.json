@@ -5,7 +5,7 @@
   "linkedin": "ahmedekramalsada",
   "github": "ahmedekramalsada",
 
-  "summary": "DevOps Engineer with strong expertise in Docker, Kubernetes, AWS, CI/CD and infrastructure automation. Focused on building scalable, reliable, and secure cloud environments.",
+  "summary": "DevOps Engineer with strong expertise in Docker, Kubernetes, AWS, CI/CD, and infrastructure automation. Passionate about building scalable, reliable, and secure cloud environments with a focus on automation and DevOps best practices.",
 
   "skills": {
     "Containerization & Orchestration": ["Docker", "Kubernetes", "Helm"],
@@ -22,62 +22,59 @@
       "company": "National Telecommunication Institute (NTI), Smart Village",
       "date": "Sep 2025 – Apr 2026",
       "tasks": [
-        "Completed 600+ hours of intensive training including DevOps, cloud, Linux, networking, and automation.",
-        "Built end-to-end CI/CD pipelines for automated deployment.",
-        "Gained strong experience in AWS, Docker, Kubernetes, and Terraform.",
-        "Improved communication and teamwork through structured projects."
+        "Completed 600+ hours of intensive training covering DevOps, cloud, Linux, networking, and automation.",
+        "Developed end-to-end CI/CD pipelines for automated deployments.",
+        "Gained hands-on experience with AWS, Docker, Kubernetes, and Terraform.",
+        "Enhanced teamwork and communication through collaborative technical projects."
       ]
     }
   ],
 
   "projects": [
-  {
-    "title": "My Portfolio Website",
-    "tech": "HTML, CSS, JavaScript",
-    "image": "assets/portfolio-preview.jpg",
-    "link": "https://ahmedekram.site",
-    "points": [
-      "Built a modern responsive portfolio website.",
-      "Uses a JSON-driven dynamic content system.",
-      "Deployed on GitHub Pages with a custom domain."
-    ]
-  },
-    
-     {
-    "title": "Company Website",
-    "tech": "HTML, CSS, JavaScript",
-    "image": "assets/companywebsite.jpg",
-    "link": "https://www.alhossancompany.online/home",
-    "points": [
-      "Built a modern responsive portfolio website.",
-      "Deployed on google apps script with a custom domain."
-    ]
-  },
-    
-  {
-    "title": "CI/CD Pipeline Automation",
-    "tech": "Git, Jenkins, Docker, SonarQube",
-    "image": "",
-    "link": "",
-    "points": [
-      "Automated build, test, and deployment stages.",
-      "Integrated SonarQube for quality and security scanning.",
-      "Reduced deployment time and eliminated manual errors."
-    ]
-  },
-
-  {
-    "title": "AWS Infrastructure Deployment",
-    "tech": "AWS EC2, S3, IAM, VPC",
-    "image": "",
-    "link": "",
-    "points": [
-      "Designed and deployed scalable cloud infrastructure.",
-      "Configured secure VPC networking and IAM roles.",
-      "Implemented monitoring and alerts with CloudWatch."
-    ]
-  }
-],
+    {
+      "title": "My Portfolio Website",
+      "tech": "HTML, CSS, JavaScript",
+      "image": "assets/portfolio-preview.jpg",
+      "link": "https://ahmedekram.site",
+      "points": [
+        "Developed a modern and fully responsive portfolio website.",
+        "Integrated a JSON-based dynamic content system.",
+        "Deployed using GitHub Pages with a custom domain."
+      ]
+    },
+    {
+      "title": "Company Website",
+      "tech": "HTML, CSS, JavaScript",
+      "image": "assets/companywebsite.jpg",
+      "link": "https://www.alhossancompany.online/home",
+      "points": [
+        "Built a professional and responsive company website.",
+        "Deployed on Google Apps Script with a custom domain."
+      ]
+    },
+    {
+      "title": "CI/CD Pipeline Automation",
+      "tech": "Git, Jenkins, Docker, SonarQube",
+      "image": "",
+      "link": "",
+      "points": [
+        "Automated build, test, and deployment pipelines.",
+        "Integrated SonarQube for code quality and security scanning.",
+        "Reduced deployment time and eliminated manual errors."
+      ]
+    },
+    {
+      "title": "AWS Infrastructure Deployment",
+      "tech": "AWS EC2, S3, IAM, VPC",
+      "image": "",
+      "link": "",
+      "points": [
+        "Designed and deployed scalable and secure cloud infrastructure.",
+        "Configured VPC networking, subnets, routing, and IAM roles.",
+        "Implemented monitoring and alerting using CloudWatch."
+      ]
+    }
+  ],
 
   "education": {
     "degree": "Bachelor of Engineering in Communications and Electronics Engineering",
