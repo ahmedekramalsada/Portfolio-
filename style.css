@@ -21,27 +21,26 @@ body {
     padding: 40px 20px 60px;
 }
 
-/* ----------------------------- */
-/* HEADER - 3 COLUMN LAYOUT      */
-/* ----------------------------- */
+/* ---------------------------------- */
+/* HEADER (2-COLUMN LAYOUT)           */
+/* ---------------------------------- */
 
 .header {
     display: grid;
-    grid-template-columns: 180px 1fr 250px;
+    grid-template-columns: 200px 1fr;
     align-items: center;
-    gap: 20px;
-    padding-bottom: 25px;
+    gap: 30px;
+    padding-bottom: 30px;
     border-bottom: 1px solid #222;
 }
 
-/* LEFT SECTION (PHOTO) */
+/* LEFT COLUMN: PROFILE PHOTO */
 .left-section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* PROFILE PHOTO */
 .profile-photo {
     width: 160px;
     height: 160px;
@@ -56,51 +55,58 @@ body {
     object-fit: cover;
 }
 
-/* CENTER SECTION (NAME + TITLE) */
-.center-section {
-    text-align: left;
+/* RIGHT COLUMN: NAME + TITLE + CONTACT */
+.right-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.center-section .name {
-    font-size: 2.6rem;
+/* Name + Title */
+.top-info {
+    margin-bottom: 18px;
+}
+
+.top-info .name {
+    font-size: 2.8rem;
     font-weight: 700;
     color: #ffffff;
 }
 
-.center-section .role {
-    font-size: 1.3rem;
+.top-info .role {
+    font-size: 1.4rem;
     font-weight: 400;
-    color: #8ea2ff;
     margin-top: 5px;
+    color: #8ea2ff;
 }
 
-/* RIGHT SECTION (CONTACT INFO) */
-.right-section {
-    text-align: right;
-    font-size: 0.95rem;
+/* CONTACT INFO (Under name/title) */
+.contact-under-name {
+    margin-top: 5px;
+    font-size: 1rem;
 }
 
-.right-section p {
-    margin-bottom: 4px;
+.contact-under-name p {
+    margin: 6px 0;
 }
 
-.right-section span {
+.contact-under-name span {
     color: #9fa6ff;
     font-weight: 500;
 }
 
-.right-section a {
+.contact-under-name a {
     color: #c4d0ff;
     text-decoration: none;
 }
 
-.right-section a:hover {
+.contact-under-name a:hover {
     text-decoration: underline;
 }
 
-/* ----------------------------- */
-/* SUMMARY UNDER HEADER          */
-/* ----------------------------- */
+/* ---------------------------------- */
+/* SUMMARY UNDER HEADER               */
+/* ---------------------------------- */
 
 .summary-under-header {
     margin-top: 28px;
@@ -115,12 +121,12 @@ body {
     margin: auto;
 }
 
-/* ----------------------------- */
-/* SECTIONS                      */
-/* ----------------------------- */
+/* ---------------------------------- */
+/* SECTION STYLING                    */
+/* ---------------------------------- */
 
 .section {
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 .section h3 {
@@ -158,15 +164,14 @@ body {
     color: #4f8cff;
 }
 
-/* ----------------------------- */
-/* SKILLS GRID                   */
-/* ----------------------------- */
+/* ---------------------------------- */
+/* SKILLS GRID                        */
+/* ---------------------------------- */
 
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px 26px;
-    margin-top: 4px;
+    gap: 20px 26px;
 }
 
 .skills-grid h4 {
@@ -175,17 +180,13 @@ body {
     color: #ffffff;
 }
 
-.skills-grid ul li {
-    font-size: 0.95rem;
-}
-
-/* ----------------------------- */
-/* EXPERIENCE BLOCKS             */
-/* ----------------------------- */
+/* ---------------------------------- */
+/* EXPERIENCE BLOCK                   */
+/* ---------------------------------- */
 
 .experience-item {
-    margin-top: 10px;
-    padding: 14px 16px;
+    margin-top: 12px;
+    padding: 16px;
     border-radius: 8px;
     background: linear-gradient(145deg, #101424, #050509);
     border: 1px solid #22263a;
@@ -194,9 +195,7 @@ body {
 .experience-header {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
     align-items: baseline;
-    margin-bottom: 8px;
 }
 
 .experience-item h4 {
@@ -207,7 +206,6 @@ body {
 .company {
     font-size: 0.93rem;
     color: #a9a9a9;
-    margin-top: 2px;
 }
 
 .date {
@@ -215,13 +213,13 @@ body {
     color: #9fa6ff;
 }
 
-/* ----------------------------- */
-/* PROJECTS                      */
-/* ----------------------------- */
+/* ---------------------------------- */
+/* PROJECTS                           */
+/* ---------------------------------- */
 
 .project {
-    margin-top: 14px;
-    padding: 14px 16px;
+    margin-top: 12px;
+    padding: 16px;
     border-radius: 8px;
     background: #0b0f1b;
     border: 1px solid #23273a;
@@ -239,17 +237,9 @@ body {
     margin-bottom: 6px;
 }
 
-/* ----------------------------- */
-/* EDUCATION                     */
-/* ----------------------------- */
-
-.education-item {
-    margin-top: 8px;
-}
-
-/* ----------------------------- */
-/* FOOTER                        */
-/* ----------------------------- */
+/* ---------------------------------- */
+/* FOOTER                             */
+/* ---------------------------------- */
 
 footer {
     margin-top: 40px;
@@ -258,22 +248,33 @@ footer {
     font-size: 0.85rem;
 }
 
-/* ----------------------------- */
-/* RESPONSIVE DESIGN             */
-/* ----------------------------- */
+/* ---------------------------------- */
+/* RESPONSIVE DESIGN                  */
+/* ---------------------------------- */
 
-@media (max-width: 900px) {
+@media (max-width: 820px) {
     .header {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
-    .center-section,
-    .right-section {
-        text-align: center;
+    .left-section {
+        margin-bottom: 20px;
     }
 
-    .right-section {
-        margin-top: 10px;
+    .right-content {
+        align-items: center;
+    }
+
+    .top-info .name {
+        font-size: 2.2rem;
+    }
+
+    .top-info .role {
+        font-size: 1.2rem;
+    }
+
+    .contact-under-name {
+        text-align: center;
     }
 }
