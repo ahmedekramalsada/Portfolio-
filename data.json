@@ -31,23 +31,53 @@
   ],
 
   "projects": [
-    {
-      "title": "DevOps CI/CD Pipeline",
-      "tech": "Git, Jenkins, SonarQube, Docker",
-      "points": [
-        "Designed and automated CI/CD pipeline to speed up deployments.",
-        "Integrated SonarQube for security and quality analysis."
-      ]
-    },
-    {
-      "title": "AWS Cloud Infrastructure",
-      "tech": "AWS EC2, S3, IAM, VPC, CloudWatch",
-      "points": [
-        "Set up scalable and secure AWS infrastructure.",
-        "Implemented monitoring and alerting with CloudWatch."
-      ]
-    }
-  ],
+  {
+    "title": "My Portfolio Website",
+    "tech": "HTML, CSS, JavaScript",
+    "image": "assets/portfolio-preview.jpg",
+    "link": "https://ahmedekram.site",
+    "points": [
+      "Built a modern responsive portfolio website.",
+      "Uses a JSON-driven dynamic content system.",
+      "Deployed on GitHub Pages with a custom domain."
+    ]
+  },
+    
+     {
+    "title": "Company Website",
+    "tech": "HTML, CSS, JavaScript",
+    "image": "assets/companywebsite.jpg",
+    "link": "https://www.alhossancompany.online/home",
+    "points": [
+      "Built a modern responsive portfolio website.",
+      "Deployed on google apps script with a custom domain."
+    ]
+  },
+    
+  {
+    "title": "CI/CD Pipeline Automation",
+    "tech": "Git, Jenkins, Docker, SonarQube",
+    "image": "",
+    "link": "",
+    "points": [
+      "Automated build, test, and deployment stages.",
+      "Integrated SonarQube for quality and security scanning.",
+      "Reduced deployment time and eliminated manual errors."
+    ]
+  },
+
+  {
+    "title": "AWS Infrastructure Deployment",
+    "tech": "AWS EC2, S3, IAM, VPC",
+    "image": "",
+    "link": "",
+    "points": [
+      "Designed and deployed scalable cloud infrastructure.",
+      "Configured secure VPC networking and IAM roles.",
+      "Implemented monitoring and alerts with CloudWatch."
+    ]
+  }
+]
 
   "education": {
     "degree": "Bachelor of Engineering in Communications and Electronics Engineering",
