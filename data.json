@@ -34,7 +34,7 @@
     {
       "title": "My Portfolio Website",
       "tech": "HTML, CSS, JavaScript",
-      "image": "assets/portfolio-preview.png",
+      "image": "portfolio-preview.png",
       "link": "https://ahmedekram.site",
       "points": [
         "Developed a modern and fully responsive portfolio website.",
@@ -45,7 +45,7 @@
     {
       "title": "Company Website",
       "tech": "HTML, CSS, JavaScript",
-      "image": "assets/companywebsite.png",
+      "image": "companywebsite.png",
       "link": "https://www.alhossancompany.online/home",
       "points": [
         "Built a professional and responsive company website.",
