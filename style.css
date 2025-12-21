@@ -113,24 +113,6 @@ body {
   text-decoration: underline;
 }
 
-/* ============================
-   LINKEDIN BADGE (NEW)
-============================ */
-.linkedin-badge {
-  margin-top: 14px;
-  padding: 12px 12px;
-  border-radius: 12px;
-  background: #0b0f1b;
-  border: 1px solid #22263a;
-  width: fit-content;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-/* If the badge is too wide on small screens */
-.linkedin-badge .badge-base {
-  transform-origin: left top;
-}
 
 /* ===============================
    SUMMARY
