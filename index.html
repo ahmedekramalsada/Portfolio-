@@ -1,159 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Ekram | DevOps Engineer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed Ekram | DevOps Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- LinkedIn Profile Badge script (add once per page) -->
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
+
 <body>
+  <div class="container">
 
-<div class="container">
+    <!-- HEADER -->
+    <header class="header">
 
-   <!-- HEADER -->
-<header class="header">
+      <div class="profile-photo">
+        <img id="profile-img" src="profile.webp" alt="Profile photo">
+      </div>
 
-    <div class="profile-photo">
-        <img id="profile-img" src="profile.webp">
-    </div>
-
-    <div class="right-content">
+      <div class="right-content">
         <div class="top-info">
-            <h1 id="name"></h1>
-            <h2 id="role"></h2>
+          <h1 id="name"></h1>
+          <h2 id="role"></h2>
         </div>
 
         <div class="contact-under-name">
-            <p><span>Email:</span> <a id="email"></a></p>
-            <p><span>LinkedIn:</span> <a id="linkedin"></a></p>
-            <p><span>GitHub:</span> <a id="github"></a></p>
+          <p><span>Email:</span> <a id="email"></a></p>
+          <p><span>LinkedIn:</span> <a id="linkedin"></a></p>
+          <p><span>GitHub:</span> <a id="github"></a></p>
         </div>
-    </div>
 
-</header>
+        <!-- LinkedIn Badge (works on websites, not GitHub README) -->
+        <div class="linkedin-badge">
+          <div class="badge-base LI-profile-badge"
+               data-locale="en_US"
+               data-size="large"
+               data-theme="light"
+               data-type="HORIZONTAL"
+               data-vanity="ahmedekramalsada"
+               data-version="v1">
+            <a class="badge-base__link LI-simple-link"
+               href="https://eg.linkedin.com/in/ahmedekramalsada?trk=profile-badge">
+              Ahmed Ekram
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </header>
 
     <!-- SUMMARY -->
     <section class="summary-under-header">
-        <p id="summary"></p>
+      <p id="summary"></p>
     </section>
 
     <!-- SKILLS -->
     <section class="section">
-        <h3>Skills</h3>
-        <div id="skills"></div>
+      <h3>Skills</h3>
+      <div id="skills"></div>
     </section>
 
     <!-- EXPERIENCE -->
     <section class="section">
-        <h3>Experience</h3>
-        <div id="experience"></div>
+      <h3>Experience</h3>
+      <div id="experience"></div>
     </section>
 
     <!-- PROJECTS -->
     <section class="section">
-        <h3>Projects</h3>
-        <div id="projects"></div>
+      <h3>Projects</h3>
+      <div id="projects"></div>
     </section>
 
     <!-- EDUCATION -->
     <section class="section">
-        <h3>Education</h3>
-        <div id="education"></div>
+      <h3>Education</h3>
+      <div id="education"></div>
     </section>
 
     <!-- LANGUAGES -->
     <section class="section">
-        <h3>Languages</h3>
-        <ul id="languages"></ul>
+      <h3>Languages</h3>
+      <ul id="languages"></ul>
     </section>
 
     <footer>
-        <p>© 2025 Ahmed Ekram — DevOps Engineer</p>
+      <p>© 2025 Ahmed Ekram — DevOps Engineer</p>
     </footer>
 
-</div>
+  </div>
 
-<!-- AUTO-LOAD JSON DATA -->
-<script>
-fetch("data.json")
-  .then(response => response.json())
-  .then(data => {
+  <!-- AUTO-LOAD JSON DATA -->
+  <script>
+    fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
 
-    // HEADER
-    document.getElementById("name").textContent = data.name;
-    document.getElementById("role").textContent = data.role;
+        // HEADER
+        document.getElementById("name").textContent = data.name;
+        document.getElementById("role").textContent = data.role;
 
-    document.getElementById("email").textContent = data.email;
-    document.getElementById("email").href = "mailto:" + data.email;
+        document.getElementById("email").textContent = data.email;
+        document.getElementById("email").href = "mailto:" + data.email;
 
-    document.getElementById("linkedin").textContent = "linkedin.com/in/" + data.linkedin;
-    document.getElementById("linkedin").href = "https://linkedin.com/in/" + data.linkedin;
+        document.getElementById("linkedin").textContent = "linkedin.com/in/" + data.linkedin;
+        document.getElementById("linkedin").href = "https://linkedin.com/in/" + data.linkedin;
 
-    document.getElementById("github").textContent = "github.com/" + data.github;
-    document.getElementById("github").href = "https://github.com/" + data.github;
+        document.getElementById("github").textContent = "github.com/" + data.github;
+        document.getElementById("github").href = "https://github.com/" + data.github;
 
-    document.getElementById("summary").textContent = data.summary;
+        document.getElementById("summary").textContent = data.summary;
 
-    // SKILLS
-    const skillsDiv = document.getElementById("skills");
-    for (const section in data.skills) {
-      let block = `<div class="skill-block"><h4>${section}</h4><ul>`;
-      data.skills[section].forEach(skill => block += `<li>${skill}</li>`);
-      block += "</ul></div>";
-      skillsDiv.innerHTML += block;
-    }
+        // SKILLS
+        const skillsDiv = document.getElementById("skills");
+        for (const section in data.skills) {
+          let block = `<div class="skill-block"><h4>${section}</h4><ul>`;
+          data.skills[section].forEach(skill => block += `<li>${skill}</li>`);
+          block += "</ul></div>";
+          skillsDiv.innerHTML += block;
+        }
 
-    // EXPERIENCE
-    const expDiv = document.getElementById("experience");
-    data.experience.forEach(job => {
-      let block = `
-        <div class="exp-item">
-          <div class="exp-header">
-            <h4>${job.title}</h4>
-            <p class="date">${job.date}</p>
-          </div>
-          <p class="company">${job.company}</p>
-          <ul>${job.tasks.map(t => `<li>${t}</li>`).join("")}</ul>
-        </div>`;
-      expDiv.innerHTML += block;
-    });
+        // EXPERIENCE
+        const expDiv = document.getElementById("experience");
+        data.experience.forEach(job => {
+          let block = `
+            <div class="exp-item">
+              <div class="exp-header">
+                <h4>${job.title}</h4>
+                <p class="date">${job.date}</p>
+              </div>
+              <p class="company">${job.company}</p>
+              <ul>${job.tasks.map(t => `<li>${t}</li>`).join("")}</ul>
+            </div>`;
+          expDiv.innerHTML += block;
+        });
 
-    // PROJECTS
-    const projDiv = document.getElementById("projects");
-    data.projects.forEach(p => {
+        // PROJECTS
+        const projDiv = document.getElementById("projects");
+        data.projects.forEach(p => {
 
-      let imageHTML = "";
-      if (p.image && p.image.trim() !== "") {
-          imageHTML = `<img src="${p.image}" class="project-img" alt="${p.title}">`;
-      }
+          let imageHTML = "";
+          if (p.image && p.image.trim() !== "") {
+            imageHTML = `<img src="${p.image}" class="project-img" alt="${p.title}">`;
+          }
 
-      projDiv.innerHTML += `
-        <a href="${p.link || "#"}" target="_blank" class="project-link">
-          <div class="project">
-            ${imageHTML}
-            <h4>${p.title}</h4>
-            <p class="tech">${p.tech}</p>
-            <ul>
-              ${p.points.map(point => `<li>${point}</li>`).join("")}
-            </ul>
-          </div>
-        </a>
-      `;
-    });
+          projDiv.innerHTML += `
+            <a href="${p.link || "#"}" target="_blank" class="project-link" rel="noopener">
+              <div class="project">
+                ${imageHTML}
+                <h4>${p.title}</h4>
+                <p class="tech">${p.tech}</p>
+                <ul>
+                  ${p.points.map(point => `<li>${point}</li>`).join("")}
+                </ul>
+              </div>
+            </a>
+          `;
+        });
 
-    // EDUCATION
-    document.getElementById("education").innerHTML = `
-      <p><strong>${data.education.degree}</strong></p>
-      <p>${data.education.school} — ${data.education.year}</p>
-    `;
+        // EDUCATION
+        document.getElementById("education").innerHTML = `
+          <p><strong>${data.education.degree}</strong></p>
+          <p>${data.education.school} — ${data.education.year}</p>
+        `;
 
-    // LANGUAGES
-    data.languages.forEach(lang => {
-      document.getElementById("languages").innerHTML += `<li>${lang}</li>`;
-    });
+        // LANGUAGES
+        data.languages.forEach(lang => {
+          document.getElementById("languages").innerHTML += `<li>${lang}</li>`;
+        });
 
-  });
-</script>
+      })
+      .catch(err => console.error("Failed to load data.json:", err));
+  </script>
 
 </body>
 </html>
