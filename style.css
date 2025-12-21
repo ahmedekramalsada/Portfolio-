@@ -11,12 +11,16 @@
   --heading-font: "Inter", sans-serif;
   --body-font: "Inter", sans-serif;
 
-  --name-size: 2.4rem;
-  --role-size: 1.2rem;
+  --name-size: 2.6rem;
+  --role-size: 1.3rem;
   --section-title-size: 1.3rem;
+
   --photo-size: 180px;
   --max-width: 1000px;
   --section-spacing: 40px;
+
+  --card-bg: #0b0f1b;
+  --card-border: #22263a;
 }
 
 /* ===============================
@@ -75,7 +79,7 @@ body {
   flex-direction: column;
 }
 
-/* NAME + ROLE (your HTML uses ids: #name and #role) */
+/* NAME + ROLE (your HTML uses ids) */
 #name {
   font-size: var(--name-size);
   font-weight: 800;
@@ -113,7 +117,6 @@ body {
   text-decoration: underline;
 }
 
-
 /* ===============================
    SUMMARY
 ================================*/
@@ -144,7 +147,7 @@ body {
   padding-left: 10px;
 }
 
-/* LISTS */
+/* LISTS (general) */
 .section ul {
   list-style: none;
   padding-left: 0;
@@ -166,9 +169,10 @@ body {
 }
 
 /* ===============================
-   SKILLS GRID
+   SKILLS
+   (Your JS creates .skill-block inside #skills)
 ================================*/
-.skills-grid {
+#skills {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
@@ -176,11 +180,10 @@ body {
 }
 
 .skill-block {
-  background: #0b0f1b;
-  border: 1px solid #22263a;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   padding: 15px;
   border-radius: 10px;
-  margin-bottom: 15px;
 }
 
 .skill-block h4 {
@@ -215,8 +218,8 @@ body {
 .exp-item {
   padding: 16px;
   border-radius: 10px;
-  background: #0b0f1b;
-  border: 1px solid #22263a;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   margin-top: 15px;
 }
 
@@ -239,7 +242,7 @@ body {
 }
 
 /* ============================
-   PROJECTS SECTION
+   PROJECTS
 ============================ */
 #projects {
   display: grid;
@@ -306,7 +309,7 @@ body {
   font-size: 0.95rem;
 }
 
-/* Dark Mode Support for project cards */
+/* Project cards in dark mode */
 @media (prefers-color-scheme: dark) {
   .project {
     background: #181818;
@@ -332,7 +335,7 @@ footer {
 }
 
 /* ===============================
-   MOBILE
+   MOBILE FIXES
 ================================*/
 @media (max-width: 768px) {
   .header {
@@ -342,12 +345,34 @@ footer {
 
   .right-content {
     align-items: center;
+    width: 100%;
   }
 
-  .linkedin-badge {
+  /* ✅ Fix: label + link alignment (no more "LinkedIn:" centered alone) */
+  .contact-under-name {
     width: 100%;
+    max-width: 420px;
+    margin: 12px auto 0;
+    text-align: left;         /* important */
+    align-self: stretch;      /* override centering */
+  }
+
+  .contact-under-name p {
     display: flex;
-    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+
+  .contact-under-name span {
+    min-width: 85px;          /* aligns Email/LinkedIn/GitHub */
+    white-space: nowrap;
+  }
+
+  .contact-under-name a {
+    overflow-wrap: anywhere;  /* wraps long URLs nicely */
+    word-break: break-word;
   }
 
   .summary-under-header p {
