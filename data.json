@@ -5,7 +5,12 @@
   "linkedin": "ahmedekramalsada",
   "github": "ahmedekramalsada",
 
-  "summary": "DevOps Engineer with strong expertise in Docker, Kubernetes, AWS, CI/CD, and infrastructure automation. Passionate about building scalable, reliable, and secure cloud environments with a focus on automation and DevOps best practices.",
+  "summary": "Junior DevOps Engineer with strong hands-on experience across the DevOps lifecycle, including CI/ CD
+pipelines, infrastructure as code, and cloud-native deployments. Proficient in AWS services, Docker,
+Kubernetes, and Helm, with practical experience using Terraform and Ansible for automation and
+provisioning. Skilled in building CI/ CD workflows with Jenkins, monitoring systems using Prometheus,
+Grafana, and CloudWatch, and managing Linux-based environments with a solid understanding of
+networking and security best practices",
 
   "skills": {
     "Containerization & Orchestration": ["Docker", "Kubernetes", "Helm"],
@@ -22,10 +27,23 @@
       "company": "National Telecommunication Institute (NTI), Smart Village",
       "date": "Sep 2025 – Apr 2026",
       "tasks": [
-        "Completed 600+ hours of intensive training covering DevOps, cloud, Linux, networking, and automation.",
-        "Developed end-to-end CI/CD pipelines for automated deployments.",
-        "Gained hands-on experience with AWS, Docker, Kubernetes, and Terraform.",
-        "Enhanced teamwork and communication through collaborative technical projects."
+        "National Telecommunication Institute (NTI), Smart Village
+• Completed 600+ hours of intensive, enterprise-style training covering
+technical, communication, and professional skills.
+• Administered Linux-based cloud environments, applying networking and
+security best practices.
+• Managed infrastructure as code solutions to provision, configure, and
+maintain scalable systems.
+• Built and optimized CI/ CD workflows to automate build, test, and
+deployment processes.
+• Deployed and operated containerized applications in cloud-native
+environments, ensuring reliability and scalability.
+• Implemented monitoring and observability to track system performance,
+availability, and resource utilization.
+• Delivered multiple hands-on projects focused on automation, stability, and
+operational efficiency.
+• Strengthened team collaboration, communication, and task ownership
+through structured, project-based training."
       ]
     }
   ],
