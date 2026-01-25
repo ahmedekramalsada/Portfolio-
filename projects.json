@@ -1,0 +1,31 @@
+{
+    "projects": [
+        {
+            "title": "Terraform",
+            "tech": "Various",
+            "image": "",
+            "link": "https://github.com/ahmedekramalsada/terraform",
+            "points": [
+                "Developed on GitHub."
+            ]
+        },
+        {
+            "title": "Ahmedekramalsada",
+            "tech": "Various",
+            "image": "",
+            "link": "https://github.com/ahmedekramalsada/ahmedekramalsada",
+            "points": [
+                "Developed on GitHub."
+            ]
+        },
+        {
+            "title": "Task Manager",
+            "tech": "Various",
+            "image": "",
+            "link": "https://github.com/ahmedekramalsada/task-manager",
+            "points": [
+                "Developed on GitHub."
+            ]
+        }
+    ]
+}
