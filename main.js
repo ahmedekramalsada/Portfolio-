@@ -111,7 +111,7 @@ async function loadProjects() {
 
 /* =========================
    INIT APP
-========================= 
+========================= */
 
 async function initPortfolio() {
   try {
@@ -129,4 +129,4 @@ async function initPortfolio() {
 
 document.addEventListener("DOMContentLoaded", initPortfolio); 
 
-*/
+
