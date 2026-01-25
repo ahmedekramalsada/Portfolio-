@@ -65,8 +65,8 @@ def main():
         project_list.append({
             "title": repo_name.replace('-', ' ').title(),
             "tech": tech,
-            "image": img_path, # سيكون فارغاً إذا لم توجد صورة
             "link": repo['html_url'],
+            "image": img_path, # سيكون فارغاً إذا لم توجد صورة
             "points": points
         })
     
