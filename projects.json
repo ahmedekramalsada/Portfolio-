@@ -3,8 +3,8 @@
         {
             "title": "Task Manager",
             "tech": "Various",
-            "image": "",
             "link": "https://github.com/ahmedekramalsada/task-manager",
+            "image": "",
             "points": [
                 "Developed on GitHub."
             ]
@@ -12,8 +12,8 @@
         {
             "title": "Terraform",
             "tech": "Various",
-            "image": "images/projects/terraform.webp",
             "link": "https://github.com/ahmedekramalsada/terraform",
+            "image": "images/projects/terraform.webp",
             "points": [
                 "Developed on GitHub."
             ]
@@ -21,8 +21,8 @@
         {
             "title": "Ahmedekramalsada",
             "tech": "Various",
-            "image": "",
             "link": "https://github.com/ahmedekramalsada/ahmedekramalsada",
+            "image": "",
             "points": [
                 "Developed on GitHub."
             ]
