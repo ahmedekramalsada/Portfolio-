@@ -34,8 +34,8 @@
     {
       "title": "My Portfolio Website",
       "tech": "HTML, CSS, JavaScript",
-      "image": "portfolio-preview.webp",
-      "link": "https://github.com/ahmedekramalsada/Portfolio-.git",
+      "image": "preview.webp",
+      "link": "https://github.com/ahmedekramalsada/Portfolio.git",
       "points": [
         "Developed a modern and fully responsive portfolio website.",
         "Integrated a JSON-based dynamic content system.",
