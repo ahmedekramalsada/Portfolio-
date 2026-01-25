@@ -111,7 +111,8 @@ async function loadProjects() {
 
 /* =========================
    INIT APP
-========================= */
+========================= 
+
 async function initPortfolio() {
   try {
     await Promise.all([
@@ -126,4 +127,6 @@ async function initPortfolio() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", initPortfolio);
+document.addEventListener("DOMContentLoaded", initPortfolio); 
+
+*/
