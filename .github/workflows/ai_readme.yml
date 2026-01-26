@@ -1,0 +1,25 @@
+name: AI README Generator
+
+on:
+  workflow_dispatch: # تشغيل يدوي فقط للتحكم والأمان
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run AI Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          MY_GLOBAL_TOKEN: ${{ secrets.MY_GLOBAL_TOKEN }}
+        run: python ai_readme_manager.py
