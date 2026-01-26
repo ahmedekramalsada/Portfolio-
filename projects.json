@@ -1,3 +1,22 @@
 {
-    "projects": []
+    "projects": [
+        {
+            "title": "Terraform",
+            "tech": "Various",
+            "image": "",
+            "link": "https://github.com/ahmedekramalsada/terraform",
+            "points": [
+                "Developed on GitHub."
+            ]
+        },
+        {
+            "title": "Portfolio",
+            "tech": "Various",
+            "image": "images/projects/Portfolio.webp",
+            "link": "https://github.com/ahmedekramalsada/Portfolio",
+            "points": [
+                "Developed on GitHub."
+            ]
+        }
+    ]
 }
