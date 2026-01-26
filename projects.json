@@ -1,9 +1,9 @@
 {
     "projects": [
         {
-            "title": "Task Manager",
+            "title": "Jenkins",
             "tech": "Various",
-            "link": "https://github.com/ahmedekramalsada/task-manager",
+            "link": "https://github.com/ahmedekramalsada/jenkins",
             "image": "",
             "points": [
                 "Developed on GitHub."
