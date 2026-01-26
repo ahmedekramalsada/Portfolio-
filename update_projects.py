@@ -23,10 +23,10 @@ def main():
     repos = requests.get(repos_url, headers=headers).json()
     
     project_list = []
-    
+    # repo['name'].lower() == PORTFOLIO_REPO.lower() or
     for repo in repos:
         # تخطي مستودع الموقع نفسه أو الـ Forks
-        if repo['name'].lower() == PORTFOLIO_REPO.lower() or repo['fork']: 
+        if repo['fork']: 
             continue
             
         repo_name = repo['name']
