@@ -1,16 +1,16 @@
 name: AI README Generator
 
 on:
-  workflow_dispatch: # تشغيل يدوي فقط للتحكم والأمان
+  workflow_dispatch: 
 
 jobs:
-  build:
+  update-readmes:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Portfolio
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
