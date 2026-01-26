@@ -41,14 +41,29 @@ def generate_readme_ai(repo_name, context):
         print("🛑 ERROR: GEMINI_API_KEY is missing!")
         return None
     
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
-    prompt = f"Write a professional README.md for '{repo_name}' with ## Description (3 points) and ## Tech Stack based on: {context}"
+    # تغيير الرابط إلى v1 بدلاً من v1beta وتأكيد اسم الموديل
+    url = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    
+    prompt = f"Write a professional README.md for the GitHub repository '{repo_name}'. Include exactly these sections: ## Description (3 bullet points) and ## Tech Stack. Context: {context}"
+    
+    payload = {
+        "contents": [{
+            "parts": [{"text": prompt}]
+        }]
+    }
     
     try:
-        res = requests.post(url, json={"contents": [{"parts": [{"text": prompt}]}]}, timeout=30)
+        res = requests.post(url, json=payload, timeout=30)
         if res.status_code == 200:
             return res.json()['candidates'][0]['content']['parts'][0]['text']
         else:
+            # إذا فشل v1، سنحاول تجربة gemini-pro كخيار احتياطي
+            print(f"⚠️ v1 failed, trying fallback model...")
+            fallback_url = f"https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key={GEMINI_API_KEY}"
+            res = requests.post(fallback_url, json=payload, timeout=30)
+            if res.status_code == 200:
+                return res.json()['candidates'][0]['content']['parts'][0]['text']
+            
             print(f"🛑 Gemini AI Error: {res.status_code} - {res.text}")
     except Exception as e:
         print(f"🛑 AI Request failed: {e}")
