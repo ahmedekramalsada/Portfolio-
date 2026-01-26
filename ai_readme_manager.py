@@ -54,7 +54,6 @@ def generate_readme_ai(repo_name, context):
 
 def update_readme(repo_name, new_content):
     url = f"https://api.github.com/repos/{USERNAME}/{repo_name}/contents/README.md"
-    # فحص إذا كان الملف موجوداً لجلب الـ SHA
     current = requests.get(url, headers=headers)
     sha = current.json().get('sha') if current.status_code == 200 else None
     
@@ -65,6 +64,11 @@ def update_readme(repo_name, new_content):
     if sha: data["sha"] = sha
     
     res = requests.put(url, json=data, headers=headers)
+    
+    # سطر إضافي لمعرفة سبب الفشل
+    if res.status_code not in [200, 201]:
+        print(f"Error details for {repo_name}: {res.status_code} - {res.json().get('message')}")
+        
     return res.status_code in [200, 201]
 
 def main():
