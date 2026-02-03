@@ -1,19 +1,19 @@
 {
     "projects": [
         {
-            "title": "Jenkins",
+            "title": "Portfolio",
             "tech": "Various",
-            "image": "",
-            "link": "https://github.com/ahmedekramalsada/jenkins",
+            "image": "images/projects/Portfolio.webp",
+            "link": "https://github.com/ahmedekramalsada/Portfolio",
             "points": [
                 "Developed on GitHub."
             ]
         },
         {
-            "title": "Portfolio",
+            "title": "Jenkins",
             "tech": "Various",
-            "image": "images/projects/Portfolio.webp",
-            "link": "https://github.com/ahmedekramalsada/Portfolio",
+            "image": "",
+            "link": "https://github.com/ahmedekramalsada/jenkins",
             "points": [
                 "Developed on GitHub."
             ]
