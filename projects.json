@@ -1,6 +1,15 @@
 {
     "projects": [
         {
+            "title": "Final Project",
+            "tech": "Various",
+            "image": "",
+            "link": "https://github.com/ahmedekramalsada/final-project",
+            "points": [
+                "Developed on GitHub."
+            ]
+        },
+        {
             "title": "Portfolio",
             "tech": "Various",
             "image": "images/projects/Portfolio.webp",
